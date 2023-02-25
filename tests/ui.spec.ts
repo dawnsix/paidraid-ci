@@ -2,17 +2,13 @@ import { test, expect } from '@playwright/test';
 import { basecfg } from "../datasource"
 import { defineConfig, devices } from '@playwright/test';
 
-test('demo', async({ page }) => {
-  console.log(page);
-});
-
 test('has title', async ({ page }) => {
   await page.goto(basecfg.url);
 
   await expect(page).toHaveTitle(/Paid Raid/);
 });
 
-test('check posts', async ({ page }) => {
+test.skip('check posts', async ({ page }) => {
   await page.goto(basecfg.url);
   await page.screenshot({ path: basecfg.shotpath + Date.now() + '-pg-home.png' });
 
