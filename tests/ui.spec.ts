@@ -1,5 +1,10 @@
 import { test, expect } from '@playwright/test';
 import { basecfg } from "../datasource"
+import { defineConfig, devices } from '@playwright/test';
+
+test('demo', async({ page }) => {
+  console.log(page);
+});
 
 test('has title', async ({ page }) => {
   await page.goto(basecfg.url);
@@ -9,7 +14,7 @@ test('has title', async ({ page }) => {
 
 test('check posts', async ({ page }) => {
   await page.goto(basecfg.url);
-  await page.screenshot({ path: basecfg.shotpath + 'pg-home.png' });
+  await page.screenshot({ path: basecfg.shotpath + Date.now() + '-pg-home.png' });
 
   await page.getByTitle('postsTile').click();
   await expect(page.getByText('Trials', { exact: true })).toBeVisible();
@@ -17,7 +22,7 @@ test('check posts', async ({ page }) => {
   let btn_accept = await page.$('text=Accept Offer');
   await btn_accept?.waitForElementState("visible")
 
-  await page.screenshot({ path: basecfg.shotpath + 'pg-posts.png' });
+  await page.screenshot({ path: basecfg.shotpath + Date.now() + '-pg-posts.png' });
 
   await expect(page).toHaveURL(basecfg.url + "posts");
 });
