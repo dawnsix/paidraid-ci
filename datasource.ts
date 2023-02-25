@@ -1,4 +1,4 @@
 export const basecfg = {
-    url: "https://sherpaconnect.vercel.app/",
+    url: "http://localhost:5173/",
     shotpath: "./screenshots/"
 }
