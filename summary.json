@@ -1,0 +1,15 @@
+{
+  "durationInMS": 4616,
+  "passed": [
+    "ui.spec.ts:5:5"
+  ],
+  "skipped": [
+    "ui.spec.ts:16:6",
+    "ui.spec.ts:16:6"
+  ],
+  "failed": [],
+  "warned": [],
+  "timedOut": [],
+  "status": "passed",
+  "startedAt": 1677380938146
+}
