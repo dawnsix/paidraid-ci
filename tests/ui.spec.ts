@@ -4,14 +4,12 @@ import { defineConfig, devices } from '@playwright/test';
 
 test('has title', async ({ page }) => {
   await page.goto(basecfg.url);
-  console.log("CI? -> " + process.env.CI)
 
   console.log(page.url())
   let title = await page.title()
   console.log(title)
 
-  await expect(page).toHaveTitle(/12345/);
-  //test.fail();
+  await expect(page).toHaveTitle(/Test Breaker x/);
 });
 
 test.skip('check posts', async ({ page }) => {
