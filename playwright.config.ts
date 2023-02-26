@@ -32,7 +32,7 @@ export default defineConfig({
   //reporter: 'html',
   reporter: [ 
     ['@butchmayhew/playwright-json-summary-reporter'],
-    //['html', { open: 'never' }] 
+    ['html', { open: 'never' }] 
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
