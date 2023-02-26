@@ -4,6 +4,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 test('has title', async ({ page }) => {
   await page.goto(basecfg.url);
+  console.log("CI? -> " + process.env.CI)
 
   console.log(page.url())
   let title = await page.title()
