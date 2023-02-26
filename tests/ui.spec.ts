@@ -8,6 +8,7 @@ test('has title', async ({ page }) => {
   console.log(page.url())
   let title = await page.title()
   console.log(title)
+  console.log(devices)
 
   await expect(page).toHaveTitle(/12345/);
 });
