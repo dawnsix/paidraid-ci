@@ -12,8 +12,7 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Test Breaker x/);
 });
 
-/*
-test.skip('check posts', async ({ page }) => {
+test('check posts', async ({ page }) => {
   await page.goto(basecfg.url);
   await page.screenshot({ path: basecfg.shotpath + Date.now() + '-pg-home.png' });
 
@@ -27,4 +26,3 @@ test.skip('check posts', async ({ page }) => {
 
   await expect(page).toHaveURL(basecfg.url + "posts");
 });
-*/
