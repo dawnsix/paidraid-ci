@@ -5,8 +5,7 @@ import { defineConfig, devices } from '@playwright/test';
 test('has title', async ({ page }) => {
   await page.goto(basecfg.url);
 
-  console.log('checking title...')
-  await expect(page).toHaveTitle(/Blah/);
+  await expect(page).toHaveTitle(/Test/);
 });
 
 test.skip('check posts', async ({ page }) => {
