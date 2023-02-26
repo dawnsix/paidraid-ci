@@ -6,4 +6,6 @@ screenshots/*
 /test-results/
 /playwright-report/
 /playwright/.cache/
+
 summary.json
+test-results.json
