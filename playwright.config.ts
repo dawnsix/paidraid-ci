@@ -29,10 +29,7 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [
-    ['list'],
-    ['json', {  outputFile: 'test-results.json' }]
-  ],
+  reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
@@ -41,8 +38,7 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    //trace: 'on-first-retry',
-    trace: 'off',
+    trace: 'on-first-retry',
   },
 
   /* Configure projects for major browsers */
@@ -52,7 +48,6 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    /*
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
@@ -62,7 +57,6 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
-    */
 
     /* Test against mobile viewports. */
     // {
