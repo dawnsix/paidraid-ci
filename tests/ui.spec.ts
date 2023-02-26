@@ -24,5 +24,5 @@ test('check posts', async ({ page }) => {
 
   await page.screenshot({ path: basecfg.shotpath + Date.now() + '-pg-posts.png' });
 
-  await expect(page).toHaveURL(basecfg.url + "postx");
+  await expect(page).toHaveURL(basecfg.url + "posts");
 });
