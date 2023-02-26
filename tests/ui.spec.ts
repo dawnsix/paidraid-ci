@@ -9,7 +9,7 @@ test('has title', async ({ page }) => {
   let title = await page.title()
   console.log(title)
 
-  await expect(page).toHaveTitle(/Test Breaker x/);
+  await expect(page).toHaveTitle(/Paid Raid/);
 });
 
 test('check posts', async ({ page }) => {
