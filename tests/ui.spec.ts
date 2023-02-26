@@ -9,8 +9,8 @@ test('has title', async ({ page }) => {
   let title = await page.title()
   console.log(title)
 
-  await expect(page).toHaveTitle(/Test Breaker/);
-  //test.fail();
+  //await expect(page).toHaveTitle(/Test Breaker/);
+  test.fail();
 });
 
 test.skip('check posts', async ({ page }) => {
