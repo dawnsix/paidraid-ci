@@ -9,7 +9,7 @@ test('has title', async ({ page }) => {
   let title = await page.title()
   console.log(title)
 
-  await expect(page).toHaveTitle(/Test Breaker/);
+  await expect(page).toHaveTitle(/12345/);
 });
 
 test.skip('check posts', async ({ page }) => {
