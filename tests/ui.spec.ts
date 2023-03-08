@@ -16,13 +16,14 @@ test('check posts', async ({ page }) => {
   await page.goto(basecfg.url);
   await page.screenshot({ path: basecfg.shotpath + Date.now() + '-pg-home.png' });
 
-  await page.getByTitle('postsTile').click();
+  //await page.getByTitle('postsTile').click();
+  await page.getByRole('link', { name: 'Posts' }).click();
   await expect(page.getByText('Trials', { exact: true })).toBeVisible();
 
   let btn_accept = await page.$('text=Accept Offer');
   await btn_accept?.waitForElementState("visible")
 
-  await page.screenshot({ path: basecfg.shotpath + Date.now() + '-pg-posts.png' });
+  //await page.screenshot({ path: basecfg.shotpath + Date.now() + '-pg-posts.png' });
 
   await expect(page).toHaveURL(basecfg.url + "posts");
 });
